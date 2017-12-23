@@ -16,7 +16,7 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('METEOR@1.2.0.2');
+  api.versionsFrom('METEOR@1.5.1');
 
   // If you change the array below, yopu must also change build.zsh.
   api.addFiles(
@@ -41,6 +41,7 @@ Package.onUse(function (api) {
       'build/VRControls.js',
 
       // THREE.js Loaders
+      'build/LoaderUtils.js',
       'lib/three.js/examples/js/loaders/AssimpJSONLoader.js',
       'lib/three.js/examples/js/loaders/AWDLoader.js',
       'lib/three.js/examples/js/loaders/BabylonLoader.js',
@@ -54,12 +55,12 @@ Package.onUse(function (api) {
       'lib/three.js/examples/js/loaders/PLYLoader.js',
       'lib/three.js/examples/js/loaders/PVRLoader.js',
       'lib/three.js/examples/js/loaders/RGBELoader.js',
-      'lib/three.js/examples/js/loaders/STLLoader.js',
+      'build/STLLoader.js',
       'lib/three.js/examples/js/loaders/SVGLoader.js',
       'lib/three.js/examples/js/loaders/TGALoader.js',
       'lib/three.js/examples/js/loaders/UTF8Loader.js',
       'lib/three.js/examples/js/loaders/VRMLLoader.js',
-      'lib/three.js/examples/js/loaders/VTKLoader.js'
+      'build/VTKLoader.js'
     ],
     'client'
   );

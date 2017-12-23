@@ -372,7 +372,8 @@ if ( typeof DataView === 'undefined' ) {
 
 				if ( Array.isArray( result ) === false ) {
 
-					result = Array.prototype.slice.call( result );
+					//result = Array.prototype.slice.call( result );
+					result = new Uint8Array(result);
 
 				}
 
