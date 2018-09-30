@@ -23,6 +23,7 @@ Object.assign( THREE.VTKLoader.prototype, THREE.EventDispatcher.prototype, {
 
 		//var loader = new THREE.FileLoader( scope.manager );
         var loader = new THREE.XHRLoader( scope.manager );
+        loader.setCrossOrigin( this.crossOrigin );
         loader.setResponseType( 'arraybuffer' );
 		loader.load( url, function ( text ) {
 
@@ -31,6 +32,12 @@ Object.assign( THREE.VTKLoader.prototype, THREE.EventDispatcher.prototype, {
 		}, onProgress, onError );
 
 	},
+
+    setCrossOrigin: function ( value ) {
+
+        this.crossOrigin = value;
+
+    },
 
 	parse: function ( data ) {
 
