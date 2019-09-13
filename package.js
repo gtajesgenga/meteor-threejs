@@ -60,7 +60,10 @@ Package.onUse(function (api) {
       'lib/three.js/examples/js/loaders/TGALoader.js',
       'lib/three.js/examples/js/loaders/UTF8Loader.js',
       'lib/three.js/examples/js/loaders/VRMLLoader.js',
-      'build/VTKLoader.js'
+      'build/VTKLoader.js',
+
+      // Geometries
+      'build/ShapeGeometry.js'
     ],
     'client'
   );
